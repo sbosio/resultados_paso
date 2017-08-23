@@ -207,10 +207,10 @@ doc_provincias
 
     if codigo_ultima_seccion != ''
       if codigo_ultima_seccion != seccion_codigo
-        puts "  > Los datos de la sección '#{seccion_codigo}' ya fueron descargados."
+        puts "  > Los datos de la sección '#{seccion_nombre} (#{seccion_codigo})' ya fueron descargados."
         next
       else
-        puts "  > La sección '#{seccion_codigo}' se descargó parcialmente. Retomando la descarga."
+        puts "  > La sección '#{seccion_nombre (}#{seccion_codigo})' se descargó parcialmente. Retomando la descarga."
         codigo_ultima_seccion = ''
         seccion_id = id_ultima_seccion.to_i
       end
@@ -222,7 +222,7 @@ doc_provincias
           (id, provincia_id, codigo, nombre)
           VALUES (#{valor_sql(seccion_id)}, #{valor_sql(provincia_id)}, #{valor_sql(seccion_codigo)}, #{valor_sql(seccion_nombre)});
       SQL
-      puts "  > Iniciando descarga de datos de la sección '#{seccion_codigo}'"
+      puts "  > Iniciando descarga de datos de la sección '#{seccion_nombre} (#{seccion_codigo})'"
     end
 
     doc_circuitos = Nokogiri::HTML(open(uri_base + uri_circuitos))

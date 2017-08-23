@@ -19,3 +19,8 @@ Para instalar las gemas utilice el comando:
 ```bash
 gem install sqlite3 open-uri nokogiri
 ```
+
+Para iniciar o retomar el proceso de descarga ejecute desde la línea de comandos:
+```bash
+./descargar_resultados
+```

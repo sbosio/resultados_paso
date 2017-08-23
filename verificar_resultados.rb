@@ -210,7 +210,7 @@ doc_provincias
         puts "  > Los datos de la sección '#{seccion_nombre} (#{seccion_codigo})' ya fueron descargados."
         next
       else
-        puts "  > La sección '#{seccion_nombre (}#{seccion_codigo})' se descargó parcialmente. Retomando la descarga."
+        puts "  > La sección '#{seccion_nombre} (#{seccion_codigo})' se descargó parcialmente. Retomando la descarga."
         codigo_ultima_seccion = ''
         seccion_id = id_ultima_seccion.to_i
       end
